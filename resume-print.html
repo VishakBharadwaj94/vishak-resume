@@ -29,10 +29,11 @@
     }
 
     /* ── PAGE ── */
+    @page { size: 210mm 370mm; margin: 0; }
     .page {
       width: 210mm;
-      min-height: 297mm;
-      padding: 12mm 14mm;
+      min-height: 370mm;
+      padding: 11mm 13mm;
       margin: 0 auto;
     }
 
@@ -271,42 +272,54 @@
 
         <div class="job">
           <div class="job-top">
+            <div class="job-title">Machine Learning Engineer III</div>
+            <div class="job-date">Jan 2024 — Present</div>
+          </div>
+          <div class="job-company">Glance · Bengaluru, India</div>
+          <ul class="job-bullets">
+            <li>Led behavioural user profiling (peek-heavy / CTA-heavy segmentation) through iterative analysis across v100 → v210; delivered <strong>30% delta on peek-heavy users</strong> on Samsung.</li>
+            <li>Built and productionised an LGBM recommendation model for Samsung achieving <strong>12% delta</strong>; owned end-to-end deployment including model-config changes.</li>
+            <li>Drove content-level personalisation in collaboration with product on rewards and feature signals.</li>
+            <li>Improved observability: CGen metrics at various cuts, hourly log traces for on-call debugging; managed popularity pipelines and recall optimisation pipeline.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-top">
+            <div class="job-title">Machine Learning Engineer II</div>
+            <div class="job-date">Jun 2022 — Dec 2023</div>
+          </div>
+          <div class="job-company">Glance · Bengaluru, India</div>
+          <ul class="job-bullets">
+            <li>Built GenAI-based image metadata tagging automation using LLMs; led prompt engineering for category and subcategory classification.</li>
+            <li>Co-built the two-tower recommendation service; main reviewer and co-contributor.</li>
+            <li>Led Pinecone vector DB POC with batch data ingestion and indexing; POC for all annotation workflows; drove annotation cleanup and cost reduction.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-top">
             <div class="job-title">Machine Learning Engineer</div>
-            <div class="job-date">Feb 2021 — Present</div>
+            <div class="job-date">Nov 2020 — Jun 2022</div>
           </div>
-          <div class="job-company">Censius.ai · Bangalore, India</div>
+          <div class="job-company">Censius AI · Bangalore, India</div>
           <ul class="job-bullets">
-            <li>Built deployment, explainability and monitoring modules using SHAP, LIME and Seldon Alibi to explain model predictions and provide insight into why models produce the outputs they do; logged and monitored with MLflow, WhyLogs and Grafana.</li>
-            <li>Created drift prediction APIs during deployment for continuous monitoring of model performance and production data.</li>
-            <li>Containerized and deployed services using Docker and GitLab CI/CD; monitored data and concept drift with custom code and WhyLogs.</li>
-            <li>Built data quality, drift and performance monitors running on Prefect / Airflow jobs.</li>
+            <li>Built deployment, explainability and monitoring modules using SHAP, LIME and Seldon Alibi to explain model predictions; logged and monitored with MLflow, WhyLogs and Grafana.</li>
+            <li>Created drift prediction APIs for continuous monitoring of model performance and production data; containerized and deployed with Docker and GitHub Actions / AWS ECS.</li>
+            <li>Built data quality, concept drift and performance monitors on Prefect / Airflow jobs.</li>
           </ul>
         </div>
 
         <div class="job">
           <div class="job-top">
-            <div class="job-title">Jr. Machine Learning Engineer</div>
-            <div class="job-date">Nov 2019 — Dec 2020</div>
+            <div class="job-title">Software Developer &amp; ML Instructor</div>
+            <div class="job-date">Jul 2018 — Oct 2020</div>
           </div>
-          <div class="job-company">Omni-Eye / The Valley Edutech · Bangalore, Karnataka</div>
+          <div class="job-company">The Valley Bootcamp · Bangalore, Karnataka</div>
           <ul class="job-bullets">
-            <li>Built models for security systems for the Omni-Eye platform.</li>
-            <li><strong>Eye In the Sky:</strong> Real-time image processing pipeline using stacked deep learning models for object detection, facial recognition and plate detection; MTCNN for facial detection, finetuned PyTorch models for recognition; OCR pipelines for plate recognition. Tracked experiments with MLflow.</li>
-            <li><strong>Image Search &amp; Clustering:</strong> Trained and finetuned a CNN autoencoder converting unlabelled images into feature vectors (reconstruction loss 0.002496); inserted into KNN for similarity search and unsupervised clustering algorithms.</li>
-            <li><strong>Voice Assistant:</strong> Audio-to-text assistant responding to a wake-word, built on an acoustic model with a finetuned language model and rescoring algorithm.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-top">
-            <div class="job-title">Software Developer &amp; Instructor</div>
-            <div class="job-date">Jul 2018 — Oct 2019</div>
-          </div>
-          <div class="job-company">The Valley Edutech · Bangalore, Karnataka</div>
-          <ul class="job-bullets">
-            <li>Developed a portal for tracking student progress using Flask, MongoDB, HTML and CSS.</li>
-            <li>Developed APIs to track GitHub commits for student batches for progress tracking.</li>
-            <li>Instructor to multiple Python, Machine Learning and Deep Learning cohorts with a code-first, practical project-oriented approach.</li>
+            <li><strong>Eye In the Sky:</strong> Real-time CV pipeline (object detection, facial recognition, plate detection) using stacked deep learning models; MTCNN + finetuned PyTorch models; OCR for plates. Tracked experiments with MLflow.</li>
+            <li><strong>Image Search &amp; Clustering:</strong> CNN autoencoder producing feature vectors (loss 0.002496); KNN similarity search + unsupervised clustering.</li>
+            <li>Student progress portal (Flask, MongoDB), GitHub commit-tracking APIs, and instructor to Python / ML / Deep Learning cohorts.</li>
           </ul>
         </div>
       </section>
