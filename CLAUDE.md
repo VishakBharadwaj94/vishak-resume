@@ -11,12 +11,8 @@ npm run dev          # serves at http://localhost:3000
 # Deploy to GitHub Pages (pushes to gh-pages branch)
 npm run deploy
 
-# Regenerate the PDF from resume-print.html (requires Chrome)
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless=new --disable-gpu --no-sandbox \
-  --print-to-pdf="Vishak_Bharadwaj_Resume.pdf" \
-  --print-to-pdf-no-header --no-pdf-header-footer \
-  "file://$(pwd)/resume-print.html"
+# Regenerate the PDF from resume-print.html (requires Chrome + npm install)
+npm run pdf
 ```
 
 After any content change, always regenerate the PDF and commit both `index.html`/`resume-print.html` and `Vishak_Bharadwaj_Resume.pdf` together.
