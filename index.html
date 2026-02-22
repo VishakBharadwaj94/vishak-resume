@@ -354,15 +354,15 @@
       font-size: 14px;
       color: var(--text-secondary);
       line-height: 1.65;
-      display: flex;
-      gap: 0.7rem;
+      padding-left: 1.1rem;
+      position: relative;
     }
     .job-bullets li::before {
       content: '›';
+      position: absolute;
+      left: 0;
       color: var(--accent);
       font-size: 15px;
-      flex-shrink: 0;
-      margin-top: 0;
       line-height: 1.65;
     }
 
@@ -741,21 +741,9 @@
       </div>
 
       <div class="project-card fade-in">
-        <span class="project-tag">Andrew Ng · C4</span>
-        <div class="project-name">Neural Style Transfer</div>
-        <div class="project-desc">Generated novel artwork by applying one image's style to another's content using a pretrained VGG network and a combined content + style loss.</div>
-      </div>
-
-      <div class="project-card fade-in">
         <span class="project-tag">Andrew Ng · C5</span>
         <div class="project-name">Trigger Word Detection</div>
         <div class="project-desc">Constructed a custom speech dataset and implemented wake-word detection using a GRU-based model in TensorFlow and pydub.</div>
-      </div>
-
-      <div class="project-card fade-in">
-        <span class="project-tag">Andrew Ng · C1</span>
-        <div class="project-name">Deep Neural Network from Scratch</div>
-        <div class="project-desc">Built and trained an L-layer deep neural network in pure NumPy for image classification — no deep learning framework.</div>
       </div>
 
     </div>
