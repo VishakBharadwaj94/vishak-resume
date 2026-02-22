@@ -1,0 +1,13 @@
+{
+  "name": "vishak-resume",
+  "version": "1.0.0",
+  "description": "Vishak Bharadwaj — ML Engineer resume website",
+  "scripts": {
+    "dev": "npx serve .",
+    "deploy": "gh-pages -d . --dotfiles"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0",
+    "serve": "^14.0.0"
+  }
+}
