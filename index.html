@@ -458,13 +458,17 @@
     .edu-date { font-family: var(--mono); font-size: 12px; color: var(--text-muted); }
 
     .cert-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .cert-header {
       display: flex;
       align-items: center;
       gap: 1rem;
       padding: 1.1rem 1.5rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
+      border-bottom: 1px solid var(--border);
     }
     .cert-icon {
       width: 36px; height: 36px;
@@ -479,6 +483,33 @@
     }
     .cert-name { font-size: 14px; font-weight: 600; }
     .cert-issuer { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+    .cert-courses {
+      list-style: none;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .cert-courses li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .cert-courses li:last-child { border-bottom: none; }
+    .course-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+      border-radius: 4px;
+      padding: 1px 6px;
+      flex-shrink: 0;
+    }
 
     /* ── CONTACT ─────────────────────────────── */
     .contact-grid {
@@ -722,11 +753,20 @@
       <div class="edu-date">2012 — 2016</div>
     </div>
     <div class="cert-card fade-in">
-      <div class="cert-icon">🎓</div>
-      <div>
-        <div class="cert-name">Deep Learning Specialization</div>
-        <div class="cert-issuer">Andrew Ng · deeplearning.ai / Coursera</div>
+      <div class="cert-header">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">Deep Learning Specialization</div>
+          <div class="cert-issuer">Andrew Ng · deeplearning.ai / Coursera · 5 courses</div>
+        </div>
       </div>
+      <ul class="cert-courses">
+        <li><span class="course-num">C1</span> Neural Networks and Deep Learning</li>
+        <li><span class="course-num">C2</span> Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</li>
+        <li><span class="course-num">C3</span> Structuring Machine Learning Projects</li>
+        <li><span class="course-num">C4</span> Convolutional Neural Networks</li>
+        <li><span class="course-num">C5</span> Sequence Models</li>
+      </ul>
     </div>
   </div>
 </section>
