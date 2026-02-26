@@ -624,9 +624,11 @@
         </div>
         <div class="job-company">Glance · Bengaluru, India</div>
         <ul class="job-bullets">
-          <li><strong>Two-Tower Recommendation Model:</strong> Co-built and main reviewer for the two-tower service; led Pinecone vector DB POC with batch data ingestion and database indexing.</li>
-          <li><strong>Popularity Pipelines:</strong> Managed and iterated on popularity pipelines; built user profiling (peek-heavy / CTA-heavy segmentation) delivering <strong>30% delta</strong> on Samsung; LGBM recommendation model achieving <strong>12% delta</strong>.</li>
-          <li><strong>AI Annotation Setup:</strong> POC for all annotation workflows; built GenAI-based image metadata tagging automation using LLMs with prompt engineering for category and subcategory classification; drove annotation cleanup and cost reduction.</li>
+          <li><strong>Personalisation at Scale:</strong> Owned end-to-end personalisation for Glance's lock screen platform (150M users) with primary ownership of the Samsung channel (40M users); achieved a <strong>40% lift in interactions</strong> — significant for a locked-in product where users haven't actively opted in.</li>
+          <li><strong>Ranking Architecture — Dense &amp; Sparse:</strong> Designed dual-track ranking pipeline: dense users served via Gemini-enriched content embeddings, two-tower retrieval, neural collaborative filtering and LGBM; sparse users ranked by Wilson's lower bound popularity + recency signals. Iterated heavily on noisy event data to extract clean engagement signal.</li>
+          <li><strong>Infrastructure (Vertex AI → GKE):</strong> Built online and offline serving pipelines on Vertex AI with Vertex Feature Store; migrated to GKE + Argo CD for cost efficiency; wrote Golang prediction services and model controllers; instrumented with OpenTelemetry, Victoria Metrics and Grafana. Low-latency online serving; 30-min hourly batch pipelines.</li>
+          <li><strong>Experimentation (Alchemist):</strong> Contributed to an internal A/B testing platform; derived minimum sample sizes from inference/confidence equations to ensure statistical significance before shipping ranking changes.</li>
+          <li><strong>AI Annotation Setup:</strong> POC for annotation workflows; GenAI-based image metadata tagging with LLMs and prompt engineering for category classification; drove annotation cleanup and cost reduction.</li>
         </ul>
       </div>
 
@@ -743,35 +745,33 @@
         <div class="skill-label">Domains</div>
         <div class="tags">
           <span class="tag">Machine Learning</span>
+          <span class="tag">Recommendation Systems</span>
           <span class="tag">Deep Learning</span>
           <span class="tag">MLOps</span>
           <span class="tag">Model Monitoring</span>
           <span class="tag">Computer Vision</span>
           <span class="tag">NLP</span>
           <span class="tag">Data Science</span>
-          <span class="tag">Image Processing</span>
         </div>
       </div>
       <div class="fade-in">
         <div class="skill-label">Stack</div>
         <div class="tags">
           <span class="tag">Python</span>
+          <span class="tag">Go</span>
           <span class="tag">PyTorch</span>
-          <span class="tag">TensorFlow</span>
           <span class="tag">Scikit-learn</span>
-          <span class="tag">Pandas</span>
-          <span class="tag">NumPy</span>
+          <span class="tag">Pandas · NumPy</span>
+          <span class="tag">Vertex AI</span>
+          <span class="tag">GKE</span>
+          <span class="tag">Argo CD</span>
+          <span class="tag">Pinecone</span>
           <span class="tag">MLflow</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Airflow</span>
           <span class="tag">Prefect</span>
+          <span class="tag">OpenTelemetry</span>
+          <span class="tag">Victoria Metrics</span>
           <span class="tag">Grafana</span>
-          <span class="tag">WhyLogs</span>
           <span class="tag">SHAP / LIME</span>
-          <span class="tag">Seldon Alibi</span>
-          <span class="tag">Flask</span>
-          <span class="tag">GitLab CI/CD</span>
-          <span class="tag">MongoDB</span>
         </div>
       </div>
     </div>
