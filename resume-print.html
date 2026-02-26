@@ -278,11 +278,11 @@
           </div>
           <div class="job-company">Glance · Bengaluru, India</div>
           <ul class="job-bullets">
-            <li><strong>Personalisation at Scale:</strong> Owned end-to-end personalisation for Glance's lock screen platform (150M users), with primary ownership of the Samsung channel (40M users); achieved a <strong>40% lift in interactions</strong>.</li>
-            <li><strong>Ranking Architecture — Dense &amp; Sparse:</strong> Dual-track ranking pipeline — dense users served via Gemini-enriched content embeddings, two-tower retrieval, neural collaborative filtering and LGBM; sparse users ranked by Wilson's lower bound popularity + recency signals.</li>
-            <li><strong>Infrastructure (Vertex AI → GKE):</strong> Built online and offline serving pipelines on Vertex AI with Vertex Feature Store; migrated to GKE + Argo CD for cost efficiency; wrote Golang prediction services and model controllers; instrumented with OpenTelemetry, Victoria Metrics and Grafana. Low-latency online serving; 30-min hourly batch pipelines.</li>
-            <li><strong>Experimentation (Alchemist):</strong> Contributed to internal A/B testing platform; derived minimum sample sizes from inference/confidence equations to ensure statistical significance before shipping ranking changes.</li>
-            <li><strong>AI Annotation Setup:</strong> POC for annotation workflows; GenAI-based image metadata tagging with LLMs and prompt engineering for category classification; drove annotation cleanup and cost reduction.</li>
+            <li><strong>Hybrid Recommendation Engine:</strong> Designed and deployed a dual-track ranking pipeline for 40M Samsung users (150M total platform). Dense track: Gemini-enriched content embeddings + Two-Tower retrieval + LGBM ranker. Sparse/cold-start track: Wilson's lower bound popularity + recency signals. Achieved a <strong>40% lift in interactions</strong>.</li>
+            <li><strong>Signal Extraction &amp; Data Pipeline:</strong> Iterated extensively on high-volume, noisy event logs (150M+ user signals) to isolate clean, high-intent behavioral signals for downstream ML. 30-min hourly batch pipelines; low-latency online serving.</li>
+            <li><strong>Infrastructure (Vertex AI → GKE):</strong> Online and offline serving on Vertex AI with Vertex Feature Store; migrated to GKE + Argo CD; Golang prediction services and model controllers; OpenTelemetry and Grafana instrumentation.</li>
+            <li><strong>Experimentation (Alchemist):</strong> Contributed to internal A/B platform; derived minimum sample sizes from inference/confidence equations for statistically significant ranking experiments.</li>
+            <li><strong>AI Annotation Setup:</strong> GenAI image metadata tagging with LLMs and prompt engineering; drove annotation cleanup and cost reduction.</li>
           </ul>
         </div>
 
@@ -359,8 +359,7 @@
           <span class="tag">Argo CD</span>
           <span class="tag">Pinecone</span>
           <span class="tag">MLflow</span>
-          <span class="tag">Prefect</span>
-          <span class="tag">OTel · Victoria Metrics</span>
+          <span class="tag">OpenTelemetry</span>
           <span class="tag">Grafana</span>
           <span class="tag">SHAP / LIME</span>
         </div>
