@@ -17,7 +17,11 @@ const path = require('path');
   const src = `file://${path.resolve(__dirname, 'resume-print.html')}`;
   await page.goto(src, { waitUntil: 'networkidle0' });
 
-  // Measure the rendered height of the content
+  // Emulate print media so the measurement matches what the PDF renderer sees
+  // (print-specific CSS rules like @media print change padding/layout slightly)
+  await page.emulateMediaType('print');
+
+  // Measure the rendered height of the content in print-layout mode
   const heightPx = await page.evaluate(
     () => document.querySelector('.page').scrollHeight
   );
