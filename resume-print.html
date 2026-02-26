@@ -229,10 +229,13 @@
     .edu-date { font-size: 7.5pt; color: var(--muted); }
 
     /* ── CERTS ── */
-    .cert { margin-bottom: 6px; }
+    .cert { margin-bottom: 8px; }
     .cert:last-child { margin-bottom: 0; }
     .cert-name { font-size: 8.5pt; font-weight: 700; }
-    .cert-issuer { font-size: 8pt; color: var(--muted); margin-top: 1px; }
+    .cert-issuer { font-size: 8pt; color: var(--muted); margin-top: 1px; margin-bottom: 3px; }
+    .cert-courses { list-style: none; display: flex; flex-direction: column; gap: 1px; }
+    .cert-courses li { font-size: 7.5pt; color: #4b5563; padding-left: 8px; position: relative; }
+    .cert-courses li::before { content: '·'; position: absolute; left: 1px; color: var(--accent); font-size: 10pt; line-height: 1.3; }
 
     @media print {
       html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -376,15 +379,32 @@
         <div class="section-title">Certifications</div>
         <div class="cert">
           <div class="cert-name">Deep Learning Specialization</div>
-          <div class="cert-issuer">Andrew Ng · deeplearning.ai</div>
+          <div class="cert-issuer">Andrew Ng · deeplearning.ai · 5 courses</div>
+          <ul class="cert-courses">
+            <li>Neural Networks &amp; Deep Learning</li>
+            <li>Hyperparameter Tuning, Regularization &amp; Optimization</li>
+            <li>Structuring Machine Learning Projects</li>
+            <li>Convolutional Neural Networks</li>
+            <li>Sequence Models</li>
+          </ul>
         </div>
         <div class="cert">
           <div class="cert-name">END2 — Extensive NLP via Deep Models</div>
           <div class="cert-issuer">The School of AI</div>
+          <ul class="cert-courses">
+            <li>Transformers, attention, BERT, GPT-1/2/3</li>
+            <li>PyTorch for NLP, embeddings, language modelling</li>
+            <li>Retrieval-augmented generation techniques</li>
+          </ul>
         </div>
         <div class="cert">
           <div class="cert-name">ERAv4 — Extensive &amp; Reimagined AI Program</div>
           <div class="cert-issuer">The School of AI</div>
+          <ul class="cert-courses">
+            <li>LLM pretraining &amp; instruction tuning from scratch</li>
+            <li>QAT, RLHF, Vision-Language Models (CLIP)</li>
+            <li>Multi-GPU CNN training on ImageNet</li>
+          </ul>
         </div>
       </section>
 
