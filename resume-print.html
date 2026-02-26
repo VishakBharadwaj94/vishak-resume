@@ -278,11 +278,11 @@
           </div>
           <div class="job-company">Glance · Bengaluru, India</div>
           <ul class="job-bullets">
-            <li><strong>Hybrid Recommendation Engine:</strong> Designed and deployed a dual-track ranking pipeline for 40M Samsung users (150M total platform). Dense track: Gemini-enriched content embeddings + Two-Tower retrieval + LGBM ranker. Sparse/cold-start track: Wilson's lower bound popularity + recency signals. Achieved a <strong>40% lift in interactions</strong>.</li>
-            <li><strong>Signal Extraction &amp; Data Pipeline:</strong> Iterated extensively on high-volume, noisy event logs (150M+ user signals) to isolate clean, high-intent behavioral signals for downstream ML. 30-min hourly batch pipelines; low-latency online serving.</li>
-            <li><strong>Infrastructure (Vertex AI → GKE):</strong> Online and offline serving on Vertex AI with Vertex Feature Store; migrated to GKE + Argo CD; Golang prediction services and model controllers; OpenTelemetry and Grafana instrumentation.</li>
-            <li><strong>Experimentation (Alchemist):</strong> Contributed to internal A/B platform; derived minimum sample sizes from inference/confidence equations for statistically significant ranking experiments.</li>
-            <li><strong>AI Annotation Setup:</strong> GenAI image metadata tagging with LLMs and prompt engineering; drove annotation cleanup and cost reduction.</li>
+            <li><strong>Hybrid Recommendation Engine:</strong> Designed and deployed a dual-track ranking pipeline that dynamically routes users based on data density — owning the Samsung channel (40M users) within a 150M-user platform. Powered the "dense" track with Gemini-enriched content embeddings, a Two-Tower retrieval model, and an LGBM ranker, while gracefully handling cold-start "sparse" users using Wilson's lower bound popularity and recency signals. Achieved a <strong>40% lift in interactions</strong> — notable for a locked-in lock screen product where users never actively opt in.</li>
+            <li><strong>Signal Extraction &amp; Data Pipeline:</strong> Iterated extensively on high-volume, noisy event logs (150M+ user signals) to isolate clean, high-intent engagement signals, ensuring downstream ML models were trained on accurate behavioral data. 30-min hourly batch pipelines; low-latency online serving.</li>
+            <li><strong>Infrastructure (Vertex AI → GKE):</strong> Built online and offline serving pipelines on Vertex AI with Vertex Feature Store; migrated to GKE + Argo CD for cost efficiency; wrote Golang prediction services and model controllers; instrumented with OpenTelemetry and Grafana.</li>
+            <li><strong>Experimentation (Alchemist):</strong> Contributed to an internal A/B testing platform; derived minimum sample sizes from inference/confidence equations to ensure statistical significance before shipping ranking changes.</li>
+            <li><strong>AI Annotation Setup:</strong> POC for annotation workflows; GenAI-based image metadata tagging with LLMs and prompt engineering for category classification; drove annotation cleanup and cost reduction.</li>
           </ul>
         </div>
 
@@ -294,8 +294,9 @@
           <div class="job-company">Censius AI · Bangalore, India</div>
           <ul class="job-bullets">
             <li><strong>Explainability Module:</strong> Used SHAP and LIME to explain model predictions and provide insight into why models produce the outputs they do; logged and monitored using MLflow, Prometheus, WhyLogs and Grafana.</li>
-            <li><strong>Drift Prediction Module:</strong> Created APIs for continuous monitoring of model performance and production data; monitored data and concept drift with custom code; built data quality, drift and performance monitors on Prefect / Airflow jobs.</li>
-            <li><strong>Deployment &amp; Infrastructure:</strong> Containerized and deployed using Docker, GitHub Actions and AWS ECS; orchestrated on Kubernetes.</li>
+            <li><strong>Drift Prediction Module:</strong> Created APIs for continuous monitoring of model performance and production data; monitored data and concept drift with custom code and WhyLogs; built data quality, drift and performance monitors on Prefect / Airflow jobs.</li>
+            <li><strong>Deployment &amp; Infrastructure:</strong> Containerized and deployed using Docker, GitHub Actions and AWS ECS; orchestrated workloads on Kubernetes.</li>
+            <li><strong>ML Lifecycle:</strong> Worked across the full ML lifecycle — from model onboarding and deployment to post-production monitoring — enabling clients to detect model degradation early and act on it.</li>
           </ul>
         </div>
 
@@ -306,9 +307,10 @@
           </div>
           <div class="job-company">Omni-Eye / The Valley Edutech · Bangalore, Karnataka</div>
           <ul class="job-bullets">
-            <li><strong>Eye In the Sky:</strong> Stacked deep learning models for real-time object detection, facial recognition (MTCNN + finetuned PyTorch) and plate detection (OCR pipelines). Tracked all experiments with MLflow.</li>
-            <li><strong>Image Search &amp; Clustering:</strong> CNN autoencoder converting unlabelled images to feature vectors; KNN and LSH (Locality Sensitive Hashing) for fast similarity search + unsupervised clustering.</li>
-            <li><strong>Student Platform &amp; Instruction:</strong> Portal for tracking student progress (Flask, MongoDB) with GitHub commit-tracking APIs; instructed Python, ML and Deep Learning cohorts with a code-first, project-oriented approach.</li>
+            <li>Built models for security systems for the <strong>Omni-Eye</strong> platform.</li>
+            <li><strong>Eye In the Sky — Real-time Image Processing:</strong> Stacked deep learning models to process images for object detection, facial recognition and plate detection. MTCNN network for facial detection; finetuned PyTorch models for facial recognition. OCR and data pipelines for plate recognition. Tracked all experiments with MLflow.</li>
+            <li><strong>Image Search &amp; Clustering:</strong> Created, trained and finetuned a CNN autoencoder that converts unlabelled images into feature vectors; inserted into KNN and LSH (Locality Sensitive Hashing) for fast similarity search and into unsupervised clustering algorithms to group image data.</li>
+            <li><strong>Student Platform &amp; Instruction:</strong> Developed a portal for tracking student progress (Flask, MongoDB) with GitHub commit-tracking APIs; instructed Python, ML and Deep Learning cohorts with a code-first, project-oriented approach.</li>
           </ul>
         </div>
       </section>
@@ -356,9 +358,6 @@
           <span class="tag">Pandas · NumPy</span>
           <span class="tag">Vertex AI</span>
           <span class="tag">GKE</span>
-          <span class="tag">Argo CD</span>
-          <span class="tag">Pinecone</span>
-          <span class="tag">MLflow</span>
           <span class="tag">OpenTelemetry</span>
           <span class="tag">Grafana</span>
           <span class="tag">SHAP / LIME</span>
