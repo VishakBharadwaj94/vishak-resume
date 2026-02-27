@@ -18,7 +18,6 @@ const path = require('path');
   await page.goto(src, { waitUntil: 'networkidle0' });
 
   // Emulate print media so the measurement matches what the PDF renderer sees
-  // (print-specific CSS rules like @media print change padding/layout slightly)
   await page.emulateMediaType('print');
 
   // Measure the rendered height of the content in print-layout mode
@@ -26,14 +25,21 @@ const path = require('path');
     () => document.querySelector('.page').scrollHeight
   );
 
+  // Convert px → mm (96dpi) and inject an exact @page size so Chrome never
+  // paginates the content and the PDF has no trailing blank space.
+  const heightMm = Math.ceil(heightPx * 25.4 / 96) + 2;
+  await page.addStyleTag({
+    content: `@page { size: 210mm ${heightMm}mm !important; margin: 0; }`,
+  });
+
   await page.pdf({
     path: path.resolve(__dirname, 'Vishak_Bharadwaj_Resume.pdf'),
     width: '210mm',
-    height: `${heightPx}px`,
+    height: `${heightMm}mm`,
     printBackground: true,
     margin: { top: '0', right: '0', bottom: '0', left: '0' },
   });
 
   await browser.close();
-  console.log(`PDF generated — single page, ${heightPx}px tall.`);
+  console.log(`PDF generated — single page, ${heightPx}px (${heightMm}mm) tall.`);
 })();
